@@ -6,4 +6,4 @@ before_install:
   - docker build -t nipun/create-react-ci-cd -f Dockerfile.dev .
 
 script:
-  - docker run nipun/create-react-ci-cd npm run test -- --coverage
+  - docker run -e CI=true nipun/create-react-ci-cd npm run test
